@@ -110,9 +110,9 @@ export default {
       }
     },
   },
-  mounted() {
+  async mounted() {
     if (!this.authKey) {
-      auth.authorization();
+      this.authKey = await auth.authorization();
     }
   }
 };

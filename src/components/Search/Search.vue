@@ -4,7 +4,8 @@
     <main class="p-search__main">
       <div class="a-container">
         <h1 class="a-title">{{ title }}</h1>
-        <div class="p-search-offers">
+        <div v-if="authKey"
+             class="p-search-offers">
           <div class="p-container p-search-offers__container">
             <div class="p-search-offers__form">
               <div class="p-search-offers__form-element">
@@ -167,6 +168,7 @@
           </div>
           <Loading v-if="isLoading"/>
         </div>
+        <Loading v-else/>
       </div>
     </main>
 
