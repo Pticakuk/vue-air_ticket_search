@@ -1,0 +1,43 @@
+@import "../../../assets/variables";
+
+.w-loading {
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+
+    &--has-padding {
+        padding: 50px;
+    }
+}
+
+.w-loading__dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: $main-color;
+  margin: 24px 4px;
+  animation: jump $transition-very-slow linear infinite;
+
+  &:nth-of-type(2) {
+    animation-delay: $transition-fast;
+  }
+
+  &:nth-of-type(3) {
+    animation-delay: $transition-medium;
+  }
+}
+
+@keyframes jump {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-10px);
+    }
+
+    40% {
+        transform: translateY(0);
+    }
+}

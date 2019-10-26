@@ -1,0 +1,39 @@
+@import "../../assets/variables";
+
+.p-home__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 768px;
+  margin: 100px auto;
+}
+.p-home__links-search,
+.p-home__links-islands {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 40%;
+  &:hover {
+    .p-home__link-name {
+      color: $main-color;
+    }
+  }
+}
+.p-home__links-image {
+  width: 100%;
+  height: auto;
+}
+.p-home__link-name {
+  font-size: 28px;
+  margin-top: 20px;
+  color: $label-color;
+  font-weight: 500;
+  transition: $transition-fast;
+}
+
+@media (max-width: 767px) {
+  .p-home__links-search,
+  .p-home__links-islands {
+    padding: 10px;
+    width: 48%;
+  }
+}

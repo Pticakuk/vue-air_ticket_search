@@ -1,0 +1,204 @@
+@import "../../assets/variables";
+
+.p-search-offers__form,
+.p-search-offers__form-filter {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+}
+.p-search-offers__form-element {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.p-search-offers__form-label {
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 160px;
+  text-align: left;
+  width: 25%;
+  margin: 0;
+}
+.p-search-offers__form-input {
+  width: 75%;
+  box-sizing: border-box;
+  &--error{
+    border-color: $error;
+  }
+}
+.p-search-offers__error-message {
+  width: 74%;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  color: $error;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+.p-search-offers__form-filter {
+  margin-bottom: 20px;
+}
+.p-search-offers__form-button {
+  margin: 0 0 0 auto;
+}
+.p-search-offers__form-filter-slider {
+  position: relative;
+}
+.p-search-offers__form-range {
+  position: absolute;
+  top:5px;
+  right: 0;
+
+  span {
+    color: $main-color;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+.p-search-offers__form-filter-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.p-search-offers__form-filter-button {
+  margin: 5px;
+}
+
+.p-search-offers__offer {
+  background: white;
+  box-shadow: $main-box-shadow;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.p-search-offers__company {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 15px;
+}
+.p-search-offers__company-logo {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-search-offers__company-name {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 15px 0 30px;
+}
+.p-search-offers__company-show-offers {
+  margin-left: auto;
+}
+.p-search-offers__company-show-offers-button {
+  height: 34px;
+  min-width: 140px;
+  padding: 0 15px;
+  font-size: 14px;
+  color: white;
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.p-search-offers__company-offers {
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-medium;
+  overflow: hidden;
+  &--open {
+    opacity: 1;
+    visibility: visible;
+    .p-search-offers__company-offer {
+      max-height: 110px;
+    }
+  }
+}
+.p-search-offers__company-offer {
+  display: flex;
+  max-height: 0;
+  transition: $transition-medium;
+  &--odd {
+    background: $bg-color;
+  }
+}
+.p-search-offers__company-offer-info {
+  width: 25%;
+  padding: 4px 3px;
+  box-sizing: border-box;
+}
+.p-search-offers__company-offer-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: $label-color;
+}
+
+@media (max-width: 767px) {
+  .p-search-offers__form-element {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .p-search-offers__form-label {
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3px;
+  }
+  .p-search-offers__form-input {
+    width: 100%;
+  }
+  .p-search-offers__error-message {
+    width: 100%;
+  }
+  .p-search-offers__company {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .p-search-offers__company-logo {
+    width: 100px;
+    max-width: 30%;
+    img{
+      width: 100%;
+    }
+  }
+  .p-search-offers__company-name {
+    font-size: 18px;
+    width: 70%;
+    margin: 0;
+    text-align: right;
+  }
+  .p-search-offers__offer {
+    padding: 0;
+  }
+  .p-search-offers__company-offers {
+    &--open {
+      .p-search-offers__company-offer {
+        max-height: 200px;
+        padding: 2px 0;
+      }
+    }
+  }
+  .p-search-offers__company-offer {
+    flex-direction: column;
+    padding: 0;
+  }
+  .p-search-offers__company-offer-info {
+    display: flex;
+    width: 100%;
+  }
+  .p-search-offers__company-offer-label {
+    width: 150px;
+    text-align: left;
+
+  }
+}

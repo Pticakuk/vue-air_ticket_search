@@ -1,0 +1,107 @@
+@import "../../assets/variables";
+
+.p-islands__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-islands__cell {
+  min-height: 50px;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &--island {
+    background: $main-color !important;
+  }
+  &--water {
+    background: $color-water !important;
+  }
+}
+.p-islands__map-size {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.p-islands__map-size-title {
+  width: 100%;
+}
+.p-islands__map-size-sliders,
+.p-islands__count-results{
+  width: 80%;
+}
+.p-islands__count-results-button,
+.p-islands__map-generate-button {
+  width: 20%;
+  min-width: 200px;
+}
+.p-islands__map-size-slider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.p-islands__map-size-n, .p-islands__map-size-m {
+  width: 100%;
+}
+.p-islands__map-size-name {
+  font-size: 26px;
+  font-weight: 600;
+  margin-left: 40px;
+  white-space: nowrap;
+  min-width: 100px;
+}
+.p-islands__map-generate {
+  margin: 0 0 30px auto;
+}
+.p-islands__count {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.p-islands__list {
+  margin: 0 auto;
+}
+.p-islands__count-results {
+  margin: 0 auto;
+}
+.p-islands__count-results-button {
+  margin-top: 30px;
+}
+.p-islands__count-result {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.p-islands__count-result-number {
+  color: $main-color;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .p-islands__cell {
+    min-height: 30px;
+    min-width: 30px;
+  }
+  .p-islands__map-size,
+  .p-islands__count {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .p-islands__map-size-sliders,
+  .p-islands__count-results{
+    width: 100%;
+  }
+  .p-islands__count-results-button,
+  .p-islands__map-generate-button {
+    width: 100%;
+    margin: 0;
+  }
+  .p-islands__map-generate {
+    margin: 0 auto;
+  }
+  .p-islands__count-results-button {
+    margin-top: 20px;
+  }
+}

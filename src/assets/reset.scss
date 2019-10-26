@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+main {
+  outline: none;
+}
+p {
+  line-height:1.6;
+}
+a, button {
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+button, input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.reset-anchor-style {
+  a, a:hover, a:active, a:visited{
+    color: black;
+  }
+}
+
+.a-anchor, .a-anchor:hover, .a-anchor:active, .a-anchor:visited {
+  color: black;
+}
+
+ol,ul,li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+* {
+  outline: none;
+}

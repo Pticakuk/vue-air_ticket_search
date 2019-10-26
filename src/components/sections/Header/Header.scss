@@ -1,0 +1,30 @@
+@import "../../../assets/variables";
+
+.s-header {
+  background: $label-color;
+}
+.s-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  height: 80px;
+  max-width: 1200px;
+}
+.s-header__nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.s-header__nav-menu-item {
+  margin-left: 30px;
+}
+.s-header__nav-menu-link {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  &:hover, &.router-link-exact-active {
+    color: $main-color;
+    transition: $transition-fast;
+  }
+}
