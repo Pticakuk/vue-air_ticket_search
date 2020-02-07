@@ -1,4 +1,4 @@
-import assign from "lodash-es/assign";
+import cloneDeep from 'lodash-es/cloneDeep';
 import get from 'lodash-es/get';
 import Header from '../sections/Header/Header.vue'
 import { mapGetters } from 'vuex';
@@ -33,11 +33,11 @@ export default {
           generatedArr[x][y] = Math.random() < 0.7 ? 0 : 1;
         }
       }
-      this.islands = this.cloneTwoDimensionalArr(generatedArr);
-      this.$store.dispatch('saveIslands', this.cloneTwoDimensionalArr(generatedArr));
+      this.islands = cloneDeep(generatedArr);
+      this.$store.dispatch('saveIslands', cloneDeep(generatedArr));
     },
     islandCount() {
-      this.islands = this.cloneTwoDimensionalArr(this.generatedIslands);
+      this.islands = cloneDeep(this.generatedIslands);
       let mark = 0;
       let islands = 0;
       let rows = this.islands.length, cols = this.islands[0].length;
@@ -68,9 +68,6 @@ export default {
         }
       }
     },
-    cloneTwoDimensionalArr(arr){
-      return JSON.parse(JSON.stringify(arr));
-    }
   },
   created() {
     this.generateIslands();
